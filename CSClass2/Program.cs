@@ -8,6 +8,8 @@ namespace CSClass2
 {
     internal class Program
     {
+
+       
         static void Main(string[] args)
         {
             Wansted<string> wanstedString = new Wansted<string>("String");
@@ -22,7 +24,28 @@ namespace CSClass2
             Console.WriteLine(p[4]);
             p[4] = 5;
 
+            Console.WriteLine("숫자 입력");
+            int output;
+            bool result = int.TryParse(Console.ReadLine(), out output);
+            if (result)
+            {
+                Console.WriteLine("숫자를 입력해주세요");
+
+            }
+            int x = 0; int y = 0;
+            int vx = 1; int vy=1;
+            Console.WriteLine("현재 좌표" + x + y);
+            NextPos(x, y, vx, vy, out x, out y);
+            Console.WriteLine("다음 좌표" + x + y);
 
         }
+
+        static void NextPos(int x, int y, int vx, int vy, out int rx, out int ry)
+        {
+            rx = x + vx;
+            ry = y + vy;
+        }
+
+
     }
 }
