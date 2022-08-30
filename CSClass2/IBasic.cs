@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CSClass2
 {
-    internal interface IBasic
+     interface IBasic
     {
+        int TestInstanceMethod();
+        int TestProperty { get; set; }
+
+
+
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSClass2;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace CSClass2
     internal class Program
     {
 
-       
+
         static void Main(string[] args)
         {
             Wansted<string> wanstedString = new Wansted<string>("String");
@@ -33,16 +34,16 @@ namespace CSClass2
 
             }
             int x = 0; int y = 0;
-            int vx = 1; int vy=1;
+            int vx = 1; int vy = 1;
             Console.WriteLine("현재 좌표" + x + y);
             NextPos(x, y, vx, vy, out x, out y);
             Console.WriteLine("다음 좌표" + x + y);
 
-            Point point;d
+            Point point; d
             point.x = 10;
             point.y = 10;
             point = new Point(3, 5);
-            Console.WriteLine(point.x +"/"+point.y);
+            Console.WriteLine(point.x + "/" + point.y);
         }
 
         List<Product> list = new List<Product>()
@@ -53,12 +54,20 @@ namespace CSClass2
             new Product() {Name = "배", Price=9000},
         };
 
-       /* list.Sort();
+        list.Sort();
         foreach(var item in list){
+            Console.WriteLint(item);
+         }
+     }
 
-         }  */
+IBasic basic = new TestClass();
+(basic as TestClass).someting();
 
+class TestClass : IBasic
+{
+    public vodi someting() { }
 
+}
 
         static void NextPos(int x, int y, int vx, int vy, out int rx, out int ry)
         {
