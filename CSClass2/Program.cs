@@ -38,13 +38,63 @@ namespace CSClass2
             NextPos(x, y, vx, vy, out x, out y);
             Console.WriteLine("다음 좌표" + x + y);
 
+            Point point;d
+            point.x = 10;
+            point.y = 10;
+            point = new Point(3, 5);
+            Console.WriteLine(point.x +"/"+point.y);
         }
+
+        List<Product> list = new List<Product>()
+        {
+            new Product() {Name = "고구마", Price=5000},
+            new Product() {Name = "사과", Price=3000},
+            new Product() {Name = "바나나", Price=2000},
+            new Product() {Name = "배", Price=9000},
+        };
+
+       /* list.Sort();
+        foreach(var item in list){
+
+         }  */
+
+
 
         static void NextPos(int x, int y, int vx, int vy, out int rx, out int ry)
         {
             rx = x + vx;
             ry = y + vy;
         }
+
+        struct Point
+        {
+            public int x;
+            public int y;
+            public String testA;
+            public String testB;
+            public Point(int x,int y, String testA, String testB)
+            {
+                this.x = x;
+                this.y = y;
+                this.testA = "초기화";
+                this.testB = "초기화";
+
+            }
+
+            struct PointClass
+            {
+                public int x;
+                public int y;
+
+               /* public PointStruct(int x, int y)
+                {
+                    this.x = x;
+                    this.y = y;
+                }*/
+            }
+        }
+        
+        
 
 
     }
