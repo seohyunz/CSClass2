@@ -110,7 +110,8 @@ Parent childAsParent = c;
 IDisposable childAsDispoable = c;
 IComparable<Child> childAsComparable = c;
 
-        
+FileStyleUriParser.WriteAllText(@"C:\Temp\test.txt","문자열 메시지를 씁니다");
+Console.WriteLine(FileStyleUriParser.ReadAllText(@"C:\Temp\test.txt"));
 
 
     }
