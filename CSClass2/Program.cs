@@ -102,7 +102,14 @@ class TestClass : IBasic
                 }*/
             }
         }
-        
+
+
+
+Child c = new Child();
+Parent childAsParent = c;
+IDisposable childAsDispoable = c;
+IComparable<Child> childAsComparable = c;
+
         
 
 
