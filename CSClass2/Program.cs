@@ -136,5 +136,18 @@ using (StreamWriter writer = new StreamWriter(@"C:\Temp\test.txt"))
 }
 Console.WriteLine(File.ReadAllText(@"C:\Temp\test.txt"));
 
+stirng[] arry = { "가", "나" };
+Console.WriteLine("숫자를 입력해주세요 (예:1)");
+int inpput = int.Parse(Console.ReadLine());
+if(input < arry.Length)
+{
+    Console.WriteLine("입력한 위치값" + arry[input]);
+}
+else
+{
+    Console.WriteLine("범위를 넘었습니다");
+}
+
+
     }
 }
