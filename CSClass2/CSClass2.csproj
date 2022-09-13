@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Child.cs" />
     <Compile Include="Dummy.cs" />
+    <Compile Include="HungryExeption.cs" />
     <Compile Include="IBasic.cs" />
     <Compile Include="Parent.cs" />
     <Compile Include="Product.cs" />

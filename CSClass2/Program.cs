@@ -136,18 +136,24 @@ using (StreamWriter writer = new StreamWriter(@"C:\Temp\test.txt"))
 }
 Console.WriteLine(File.ReadAllText(@"C:\Temp\test.txt"));
 
-stirng[] arry = { "가", "나" };
+string[] arry = { "가", "나" };
 Console.WriteLine("숫자를 입력해주세요 (예:1)");
 int inpput = int.Parse(Console.ReadLine());
-if(input < arry.Length)
+//catch(var exceptjon)-var는 예외 매개변수 부분에서 사용할 수 없다
+try
 {
-    Console.WriteLine("입력한 위치값" + arry[input]);
-}
-else
-{
-    Console.WriteLine("범위를 넘었습니다");
+    int index = int.Parse(input);
+    Console.WriteLine("입력한 위치값" + arry[index]);
 }
 
+catch(Exception ex)
+{
+    Console.WriteLine("예외가 발생했군요");
+    Console.WriteLine("GetType +" + ex.GetType());
+    Console.WriteLine("Message" + ex.Message());
+   
+}
+if(input <arry.Length)
 
     }
 }
